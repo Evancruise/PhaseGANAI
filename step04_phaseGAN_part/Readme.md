@@ -2,11 +2,6 @@
 PhaseGAN is a deep-learning phase-retrieval approach allowing the use of unpaired datasets and includes the physics of image formation. 
 For more detailed information about PhaseGAN training and performance, please refer to the [PhaseGAN paper](https://arxiv.org/abs/2011.08660).
 
-<p align="center">
-<img src="imgs/Main.png"/>
-<img align="center" src="imgs/Cycle.png" width="650"/>
-</p>
-
 ## Colab Notebook
 PhaseGAN Tutorial [Google Colab](https://colab.research.google.com/github/pvilla/PhaseGAN/blob/master/PhaseGAN_Notebook.ipynb) | [Code](https://github.com/pvilla/PhaseGAN/blob/master/PhaseGAN_Notebook.ipynb)
 
