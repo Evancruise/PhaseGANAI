@@ -25,9 +25,9 @@ Step0_DefineParameters_Script.m
 2. Produce these images using CLB (Clustered Lumpy Background) models
 3. Navigate forward propagation to acquire X-ray images on digital detectors
 4. Apply phase retrieval algorithms to reconstruct images we actually get
-'''
+```
 Step1_GenerateRealizations.m
-'''
+```
 5. Use statistical observers to analyze image quality and detactability of signals (Gaussian sphere object, represented as some precancerous areas).
 ```
 Step2_CalculateCovofRealizations
