@@ -30,7 +30,7 @@ Step1_GenerateRealizations.m
 ```
 5. Use statistical observers to analyze image quality and detactability of signals (Gaussian sphere object, represented as some precancerous areas).
 ```
-Step2_CalculateCovofRealizations
+Step2_CalculateCovofRealizations.m
 Step3_template_observer_HO.m
 ```
 
