@@ -44,17 +44,19 @@ To run the training:
 For more training options, please check out:
 
 # run with initial epoch 0
+```
 python3 train.py --load_path dataset/IMGS_PCI -b 10 --model_A UNet --model_B UNet
-python3 train.py --load_path dataset/IMGS_PCI -b 10 --model_A WNet_DC --model_B WNet_DC
-python3 train.py --load_path dataset/IMGS_PCI -b 10 --model_A SRResNet --model_B SRResNet
-python3 train.py --load_path dataset/IMGS_PCI -b 10 --model_A UNet_phasegan --model_B UNet_phasegan
+```
 
 # run with initial epoch # (continue training)
+```
 python3 train.py --load_path dataset/IMGS_PCI --load_weights True --model_A UNet --model_B UNet
+```
 input the initial epoch: 3
 input the corresponding date (ex: Jun04_19_31): May04_00_39
-
+```
 python3 train.py --load_path dataset/IMGS_PCI --load_weights True --model_A WNet --model_B SRResNet
+```
 input the initial epoch: 5*
 input the corresponding date (ex: Jun04_19_31): Jun04_19_31*
 
@@ -63,10 +65,9 @@ input the initial epoch: 4*
 input the corresponding date (ex: Jun04_19_31): Jun04_19_31*
 
 # testing phase
+```
 python3 test.py --load_path dataset/IMGS_PCI -b 1 --model_A UNet --model_B UNet
-python3 test.py --load_path dataset/IMGS_PCI -b 1 --model_A WNet_DC --model_B WNet_DC
-python3 test.py --load_path dataset/IMGS_PCI -b 1 --model_A SRResNet --model_B SRResNet
-python3 test.py --load_path dataset/IMGS_PCI -b 1 --model_A UNet_phasegan --model_B UNet_phasegan
+```
 
 ### Results
 The training results will be saved in: `./results/fig/run_name/train`.
@@ -74,7 +75,9 @@ The training parameters and losses will be saved to a txt file here: `./results/
 The models will be saved in `./results/fig/run_name/save`.
 
 # visualization results (training/validation curves) 
+```
 tensorboard --logdir './runs/.' --bind_all
+```
 
 ## Citation
 If you use this code for your research, please cite our paper.
