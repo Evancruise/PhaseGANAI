@@ -95,7 +95,7 @@ The level of contrast becomes higher as the object-to-detector distance increase
 1. The Enhanced phaseGAN can capture the relationships between two domains, which are the contact plane and detector plane and outperform the phaseGAN. Besides, it can well enhance the contrast among the backgrounds and signals and thus perform well in detecting signals.
 2. Enhanced phaseGAN offers an excellent framework for addressing the nonlinear relationship among phase retrieval algorithms. 
 <p align="center">
-  <img src="figures/ROC_curves.jpg" />
+  <img src="figures/ROC_curve.jpg" />
 </p>
 
 # Difficulties and related future works
