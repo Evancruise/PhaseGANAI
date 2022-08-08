@@ -3,7 +3,7 @@
 This project aims to develop an automatic recognizing image system for early detection of breast cancer.
 
 ## Conventional imaging technique
-Conventional imaging technique is based on the contrast of the attenuation ma­terial within an object. It is proven that it can reach great vi­sualization in high X­-ray energy and low radiation dose. However, the image quality is refrained and only valid for weak absorbing objects.  By contrast, current imaging technique, phase contrast imaging, emerges with improved phase sensitivity whose magnitude in soft tissue is 3 orders higher than the attenuation part especially in the presence of tissues with similar density. PCI techniques can enhance the contrast and sensitivity by exploiting the phase contrast. It has seen a large crease in interest and development since 25 years ago. With the use of phase retrieval algorithms together with CT, the complex refractive index distribution in the imaged object can be reconstructed in 3D.
+Conventional imaging technique is based on the contrast of the attenuation material within an object. It is proven that it can reach great vi­sualization in high X­-ray energy and low radiation dose. However, the image quality is refrained and only valid for weak absorbing objects.  By contrast, current imaging technique, phase contrast imaging, emerges with improved phase sensitivity whose magnitude in soft tissue is 3 orders higher than the attenuation part especially in the presence of tissues with similar density. PCI techniques can enhance the contrast and sensitivity by exploiting the phase contrast. It has seen a large crease in interest and development since 25 years ago. With the use of phase retrieval algorithms together with CT, the complex refractive index distribution in the imaged object can be reconstructed in 3D.
 Phase retrieval algorithms are realized base on the linearization of the Fresnel integral (the solutions are not applicable for all conditions (partially followed))
 Challenges:
 Relatively short distances (paraxial approximation): edge-enhancement regime (assumptions: homogeneity of constituent materials, but not apt to various types of samples).
@@ -75,8 +75,9 @@ The level of contrast becomes higher as the object-to-detector distance increase
 1. The image correlations after applying the iterative approach and neural networks are mitigated in comparison to the estimates without the use of neural networks. This also implies that the lumpy appearance can be partially removed through neural networks.
 ![](figures/covariance_matrices.jpg)
 
-2. The phaseGAN performs better than the others with AUC in terms of phase components under SKE/BKS detection task.\n
+2. The phaseGAN performs better than the others with image quality in terms of phase components, with the figures and its corresponding table shown in the following.
 ![](figures/images_results.jpg)
+![](figures/table.jpg)
 
 # Conclusion
 1. The Enhanced phaseGAN can capture the relationships between two domains, which are the contact plane and detector plane and outperform the phaseGAN. Besides, it can well enhance the contrast among the backgrounds and signals and thus perform well in detecting signals.
