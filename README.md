@@ -44,7 +44,9 @@ The area of the signal is overlapped with that of high-density tissues in some p
 ## PhaseGAN
 The architecture of our neural network, which is called Enhanced phaseGAN in this thesis, is based on the CycleGAN model.
 
-![](figures/phaseGAN_vs_cycleGAN.jpg)
+<p align="center">
+  <img src="figures/phaseGAN_vs_cycleGAN.jpg" />
+</p>
 
 This architecture contains two pairs of generators and discriminators to ensure consistency between two domains. Specifically, the target space, which is wavefield on the object plane, is equipped with one probability distribution, whereas the input image space with another probability distribution. 
 Then, the goal of the model is to transform the distribution of the intensity to the wavefield distribution so that the two distributions can be similar.
