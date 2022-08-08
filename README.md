@@ -80,7 +80,7 @@ The level of contrast becomes higher as the object-to-detector distance increase
 ## Comments on the following plots
 1. The image correlations after applying the iterative approach and neural networks are mitigated in comparison to the estimates without the use of neural networks. This also implies that the lumpy appearance can be partially removed through neural networks.
 <p align="center">
-  <img src="figures/covariance_matrices.jpg" />
+  <img src="figures/covariance_metrices.jpg" />
 </p>
 
 2. The phaseGAN performs better than the others with image quality in terms of phase components, with the figures and its corresponding table shown in the following.
