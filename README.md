@@ -18,7 +18,9 @@ Phase retrieval is the process of algorithmically finding solutions to the phase
 ![](figures/schematic_diagram.jpg)
 
 ## Steps for image statistical analytics
-![](figures/matlab_process.jpg)
+<p align="center">
+  <img src="figures/matlab_process.jpg" />
+</p>
 
 1. (Image formation) Set the parameters prepared for generating X-ray breast mammography images
 command:
@@ -75,11 +77,17 @@ The level of contrast becomes higher as the object-to-detector distance increase
 
 ## Comments on the following plots
 1. The image correlations after applying the iterative approach and neural networks are mitigated in comparison to the estimates without the use of neural networks. This also implies that the lumpy appearance can be partially removed through neural networks.
-![](figures/covariance_matrices.jpg)
+<p align="center">
+  <img src="figures/covariance_matrices.jpg" />
+</p>
 
 2. The phaseGAN performs better than the others with image quality in terms of phase components, with the figures and its corresponding table shown in the following.
-![](figures/images_results.jpg)
-![](figures/table.jpg)
+<p align="center">
+  <img src="figures/images_results.jpg" />
+</p>
+<p align="center">
+  <img src="figures/table.jpg" />
+</p>
 
 # Conclusion
 1. The Enhanced phaseGAN can capture the relationships between two domains, which are the contact plane and detector plane and outperform the phaseGAN. Besides, it can well enhance the contrast among the backgrounds and signals and thus perform well in detecting signals.
