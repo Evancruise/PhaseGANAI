@@ -15,7 +15,9 @@ Phase contrast imaging concentrates on the phase shift in the phase of X-ray bea
 ## Forward Propagation and Phase retrieval algorithm (stated in phase_retrieval.m)
 Phase retrieval is the process of algorithmically finding solutions to the phase problem, which can be seved as a kind of nonlinear inverse problem. The major obstacle in the phase retrieval problem is the nonlinear relationship between the intensity (amplitude) and phase of the sample in the image formation process. Although this nonlinear inverse problem can be solved by the iterative phase retrieval algorithms, they rely on computationally intensive iterative operations, and there is no theoretical convergence guarantee, therefore the image degradation will be occurred.
 
-![](figures/schematic_diagram.jpg)
+<p align="center">
+  <img src="figures/schematic_diagram.jpg" />
+</p>
 
 ## Steps for image statistical analytics
 <p align="center">
