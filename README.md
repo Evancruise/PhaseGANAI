@@ -1,5 +1,9 @@
 # PhaseGANAI
 
+<p align="center">
+  <img src="figures/breast_mammography.jpg" />
+</p>
+
 This project aims to develop an automatic recognizing image system for early detection of breast cancer.
 
 ## Conventional imaging technique
