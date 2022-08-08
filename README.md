@@ -69,7 +69,7 @@ The level of contrast becomes higher as the object-to-detector distance increase
 
 ## Deep learning process
 # loss curves
-![](figures/phaseGAN_vs_cycleGAN.jpg)
+![](figures/loss_curves.jpg)
 
 ## Comments on the following plots
 1. The image correlations after applying the iterative approach and neural networks are mitigated in comparison to the estimates without the use of neural networks. This also implies that the lumpy appearance can be partially removed through neural networks.
