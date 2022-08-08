@@ -18,7 +18,6 @@ Phase retrieval is the process of algorithmically finding solutions to the phase
 ![](figures/schematic_diagram.jpg)
 
 ## Steps for image statistical analytics
-The following figure shows the whole process of what the malab does.
 ![](figures/matlab_process.jpg)
 
 1. (Image formation) Set the parameters prepared for generating X-ray breast mammography images
