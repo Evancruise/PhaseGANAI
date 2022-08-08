@@ -38,6 +38,38 @@ Step3_template_observer_HO.m
 
 The area of the signal is overlapped with that of high-density tissues in some phase images, which defers the process of image restoration. As a result, the relationship between the object plane and detector planes cannot be well described. Deep learning techniques have been used to establish a non-linear mapping relationship between the input data and the reconstructed data within the regime of phase-contrast imaging. Here, GAN structure based on the iterative approach is applied to deal with the aforementioned issues. In this part, you can browse the files in 'step04_phaseGAN_part' folder.
 
+# PhaseGAN
+The architecture of our neural network, which is called Enhanced phaseGAN in this thesis, is based on the CycleGAN model.
+
+![](figures/phaseGAN_vs_cycleGAN.png)
+
+This architecture contains two pairs of generators and discriminators to ensure consistency between two domains. Specifically, the target space, which is wavefield on the object plane, is equipped with one probability distribution, whereas the input image space with another probability distribution. 
+Then, the goal of the model is to transform the distribution of the intensity to the wavefield distribution so that the two distributions can be similar.
+
+# 1. Proposed discriminator: PatchGAN
+The discriminator structure is modified from the PatchGAN model, aiming to restrict our attention to the image texture with a large variation in local image patches and trying to classify if each of these patches in an image is real or fake.
+
+# 2. Proposed generator: U-Net
+The UNet utilizes substitute layers both in its contraction path, where the max-pooling operators are replaced by convolution layers. On the other hand, in extraction path, the deconvolution layers are used to realize a trainable upsampling operation. By doing so, the network can possess more learning capacity.
+Skip connection through copy and concatenation is applied among the layers in both contraction and extraction paths to allow the subsequent layers to reuse middle representations, maintaining more information which can lead to better performances.
+
+# 3. Covariance estimation network
+The network is concatenated behind each generator in Enhanced phaseGAN, which is called covariance estimation network, to reconstruct the samples from the target distribution. This model has the capability of predicting a full Gaussian covariance matrix for each reconstruction, which permits an efficient likelihood evaluation through capturing the pixel-wise correlations to preserve high-frequency details.
+
+The goal of Enhanced phaseGAN is to learn the mapping between the input and the output. During the whole process, two pairs of generators and discriminators are included. One generator is the detector plane generator, denoted as $G_D$, which implements correction on detector planes. This process aims to make up the wavefield images from the intensity measurements, which is similar to the phase retrieval algorithm but is combined with the regularization technique. The other one is the object plane generator, denoted as $G_O$, which represents the mapping from the object plane to the detector plane. The covariance estimation networks, denoted as $C_O$ and $C_D$ concatenated behind $G_O$ and $G_D$ respectively, are used to optimize the reconstructed results and enhance the signal detectability. As for the discriminators, $D_O$ and $D_D$ represent the object plane discriminator and the detector plane discriminator, respectively, that are both used to discriminate the generated images as real or fake.
+
+## Conclusion
+1. The Enhanced phaseGAN can capture the relationships between two domains, which are the contact plane and detector plane and outperform the phaseGAN. Besides, it can well enhance the contrast among the backgrounds and signals and thus perform well in detecting signals.
+2. Enhanced phaseGAN offers an excellent framework for addressing the nonlinear relationship among phase retrieval algorithms. 
+
+## Difficulties and related future works
+# Difficulties
+1. As the images become more complicated, the IOs in more complicated detection tasks become unavailable.
+2. The knowledge of the statistical properties can only be acquired beforehand in a few clinical practices, resulting in limited evaluation.
+# Future works
+1. Analyze realistic background images found in clinical applications using other observers (eg. channelized HOs), which may have a stronger correlation with the performance of the human observer than HOs.
+2. Another deep generative models, such as variational autoencoders, can be regularised to avoid overfitting, providing a more realistic way to produce images whose latent space has good properties.
+
 ## Citation
 
 ```
